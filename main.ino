@@ -17,7 +17,7 @@ void loop() {
   if (val != 0) { // if the input was the encoder moving then update menuIndex
     menuIndex += val;
     if (menuIndex < 0) menuIndex = 0;
-    if (menuIndex > 2) menuIndex = 2;
+    if (menuIndex > 1) menuIndex = 1;
   } else { // else enter the submenu that was clicked on
     switch (menuIndex)
     {
@@ -30,6 +30,7 @@ void loop() {
         // call submenu function
 
       default:
+        myEnc.write(0);
         lcd.clear();
         lcd.setCursor(0, 0);
         lcd.print("Error: Select");
@@ -76,17 +77,17 @@ int readEnc() {
 }
 
 void calibrateMenu() {
-  
+  int subMenuIndex = 0;
 }
 
 void grindCapMenu()  {
-  
+  int subMenuIndex = 0;
 }
 
 void faceCapMenu() {
-  
+  int subMenuIndex = 0;
 }
 
 void faceChipMenu() {
-  
+  int subMenuIndex = 0;
 }
