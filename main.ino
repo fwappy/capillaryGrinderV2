@@ -1,15 +1,17 @@
 #include <Wire.h>
 #include <Encoder.h>
+Encoder myEnc(2, 3);
 
 #include <LiquidCrystal_I2C.h>
 LiquidCrystal_I2C lcd(0x20, 16, 2);
 
-Encoder myEnc(2, 3);
 int menuIndex = 0;
 
 void setup() {
   lcd.init(); //initialize the lcd
   lcd.backlight();
+
+  // load variables from EEPROM
 }
 
 void loop() {
